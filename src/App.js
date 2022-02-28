@@ -7,12 +7,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <Router>
+      <Route>
+        <NavBar />
+      </Route>
       <Switch>
         <Route>
-          <NavBar />
-        </Route>
-        <Route>
-          <Home />
+          <Home path="/" />
         </Route>
       </Switch>
     </Router>

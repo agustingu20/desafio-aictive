@@ -1,7 +1,10 @@
 import React from 'react'
+import Metrics from './Metrics'
 
 export default function Home() {
     return (
-        <div>Home</div>
+        <div>
+            <Metrics />
+        </div>
     )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Account() {
+export default function MyAccount() {
     return (
         <div>Account</div>
     )
