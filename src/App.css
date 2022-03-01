@@ -18,3 +18,20 @@
   background-color: white;
   border-radius: 20px;
 }
+
+/* CSS SideBar */
+.sidebar {
+  position: fixed;
+  width: 17vw;
+  height: 100%;
+  /* left: -12vw; */
+}
+
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-icons {
+  margin-left: 7rem;
+}
