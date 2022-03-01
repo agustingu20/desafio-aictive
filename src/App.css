@@ -1,0 +1,20 @@
+.metrics-container-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+}
+
+.buttons-metrics {
+  border-radius: 20px !important;
+  padding: 0.2rem 1.5rem !important;
+  margin: 0 1rem;
+}
+
+.metrics-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 20px;
+}
