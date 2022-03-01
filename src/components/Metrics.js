@@ -1,37 +1,52 @@
 import { faListCheck, faStopwatch, faPersonRunning } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
-import { Button } from 'react-bootstrap'
+import { Button, Dropdown, DropdownButton, InputGroup } from 'react-bootstrap'
 
 export default function Metrics() {
     return (
-        <div className='metrics-container-wrapper'>
-            <section className='text-center'>
-                <h4 className='text-primary'>¡Hola <b>Ragnar Lotbrok</b>!</h4>
-                <p>Tus métricas generales son las siguiente:</p>
-                <div>
-                    <Button variant="outline-primary" className='btn btn-sm buttons-metrics'>Año</Button>
-                    <Button variant="outline-primary" className='btn btn-sm buttons-metrics'>Mes</Button>
-                    <Button variant="outline-primary" className='btn btn-sm buttons-metrics'>Semana</Button>
-                </div>
-                <div className='metrics-container'>
-                    <div className='text-center mx-3'>
-                        <FontAwesomeIcon icon={faListCheck} style={{ fontSize: "35px" }} />
-                        <h3 className='mt-2 mb-0'>25</h3>
-                        <p>Rutinas realizadas</p>
+        <>
+            <div style={{ position: "absolute", top: "1rem", right: "2rem" }} >
+                <InputGroup className="mb-3">
+                    <DropdownButton
+                        variant="outline-secondary"
+                        title="Dropdown"
+                        id="input-group-dropdown-1"
+                    >
+                        <Dropdown.Item href="#">Editar perfil</Dropdown.Item>
+                        <Dropdown.Item href="#">Cerrar sesión</Dropdown.Item>
+                    </DropdownButton>
+                </InputGroup>
+            </div>
+            <div className='metrics-container-wrapper'>
+                <section className='text-center'>
+                    <h4 className='text-primary'>¡Hola <b>Ragnar Lotbrok</b>!</h4>
+                    <p>Tus métricas generales son las siguiente:</p>
+                    <div>
+                        <Button variant="outline-primary" className='btn btn-sm buttons-metrics'>Año</Button>
+                        <Button variant="outline-primary" className='btn btn-sm buttons-metrics'>Mes</Button>
+                        <Button variant="outline-primary" className='btn btn-sm buttons-metrics'>Semana</Button>
                     </div>
-                    <div className='text-center mx-3'>
-                        <FontAwesomeIcon icon={faPersonRunning} style={{ fontSize: "35px" }} />
-                        <h3 className='mt-2 mb-0'>124</h3>
-                        <p>Ejercicios realizados</p>
+                    <div className='metrics-container'>
+                        <div className='text-center mx-3'>
+                            <FontAwesomeIcon icon={faListCheck} style={{ fontSize: "30px", color: "#007bff" }} />
+                            <h3 className='mt-2 mb-0 text-primary fw-bold'>25</h3>
+                            <p>Rutinas realizadas</p>
+                        </div>
+                        <div className='text-center mx-3'>
+                            <FontAwesomeIcon icon={faPersonRunning} style={{ fontSize: "30px", color: "#007bff" }} />
+                            <h3 className='mt-2 mb-0 text-primary fw-bold'>124</h3>
+                            <p>Ejercicios realizados</p>
+                        </div>
+                        <div className='text-center mx-3'>
+                            <FontAwesomeIcon icon={faStopwatch} style={{ fontSize: "30px", color: "#007bff" }} />
+                            <h3 className='mt-2 mb-0 text-primary fw-bold'>146 <span className='text-primary' style={{ fontSize: "1rem" }}>min.</span></h3>
+                            <p>Tiempo de ejercicio</p>
+                        </div>
                     </div>
-                    <div className='text-center mx-3'>
-                        <FontAwesomeIcon icon={faStopwatch} style={{ fontSize: "35px" }} />
-                        <h3 className='mt-2 mb-0'>146 min.</h3>
-                        <p>Tiempo de ejercicio</p>
-                    </div>
-                </div>
-            </section>
-        </div>
+                </section>
+            </div>
+        </>
+
     )
 }
