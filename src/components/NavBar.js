@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse, faUser, faGear, faGrip, faCircleQuestion, faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons"
 import React from 'react'
 import { Navbar, Nav, Container } from "react-bootstrap"
+import { Link } from 'react-router-dom'
 
 export default function NavBar() {
     return (
@@ -12,32 +13,33 @@ export default function NavBar() {
                 <Navbar.Collapse id="basic-navbar-nav" className='flex-column icons-column'>
                     <Nav className="me-auto flex-column text-start" style={{ width: "260px" }}>
                         <div className='d-flex justify-content-between'>
-                            <Nav.Link href="#home">Inicio</Nav.Link>
+                            <Link href="#home">Inicio</Link>
                             <FontAwesomeIcon icon={faHouse} className="mt-2" />
                         </div>
                         <div className='d-flex justify-content-between'>
-                            <Nav.Link href="#link">Mi cuenta</Nav.Link>
+                            <Link to="myaccount">Mi cuenta</Link>
                             <FontAwesomeIcon icon={faUser} className="mt-2" />
                         </div>
                         <div className='d-flex justify-content-between'>
-                            <Nav.Link href="#link">Ajustes</Nav.Link>
+                            <Link href="#link">Ajustes</Link>
                             <FontAwesomeIcon icon={faGear} className="mt-2" />
                         </div>
                         <div className='d-flex justify-content-between'>
-                            <Nav.Link href="#link">Aplicaciones</Nav.Link>
+                            <Link href="#link">Aplicaciones</Link>
                             <FontAwesomeIcon icon={faGrip} className="mt-2" />
                         </div>
                         <div className='d-flex justify-content-between'>
-                            <Nav.Link href="#link">Soporte</Nav.Link>
+                            <Link href="#link">Soporte</Link>
                             <FontAwesomeIcon icon={faCircleQuestion} className="mt-2" />
                         </div>
                         <div className='d-flex justify-content-between mt-5'>
-                            <Nav.Link href="#link" className='text-start'>Cerrar Sesión</Nav.Link>
+                            <Link href="#link" className='text-start'>Cerrar Sesión</Link>
                             <FontAwesomeIcon icon={faArrowRightFromBracket} className="mt-2" />
                         </div>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
+
         </Navbar>
     )
 }

@@ -56,6 +56,7 @@
 }
 
 .card-form-container {
+  margin-top: 44px;
   width: 30rem;
   padding: 1rem;
   border-radius: 15px !important;
@@ -81,4 +82,17 @@
 .form-button {
   width: 11rem;
   margin-top: 1rem;
+}
+
+.back-link {
+  position: absolute;
+  left: 22vw;
+  top: 20px;
+  display: flex;
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+.back-link:link {
+  text-decoration: none;
 }
