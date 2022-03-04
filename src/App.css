@@ -28,9 +28,12 @@
 /* CSS SideBar */
 .sidebar {
   position: fixed;
-  width: 17vw;
   height: 100vh;
-  /* left: -12vw; */
+  margin-left: -7rem;
+}
+
+.sidebar-hide {
+  left: -12.6vw;
 }
 
 .sidebar-container {
@@ -40,6 +43,97 @@
 
 .sidebar-icons {
   margin-left: 7rem;
+}
+
+div ul li {
+  list-style: none;
+}
+
+div ul {
+  padding-left: 0px;
+}
+
+.aictive-logo {
+  border-radius: 50%;
+  width: 45px;
+  height: 40px;
+  padding: 3px;
+}
+
+.logo-container {
+  background-color: rgb(0, 0, 153);
+  padding: 1rem;
+  padding-right: 3rem;
+  border-top-right-radius: 15%;
+  border-bottom-right-radius: 15%;
+  position: relative;
+  top: -43vh;
+  left: 18.3vw;
+}
+
+.links-sidebar {
+  padding-left: 2vw;
+  margin-top: 2.21rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: solid rgba(128, 128, 128, 0.527) 1px;
+}
+
+.link-sidebar-closeSession {
+  padding-left: 2vw;
+  margin-top: 22rem;
+  border-bottom: solid rgba(128, 128, 128, 0.527) 1px;
+}
+
+.links-wrapper {
+  margin-top: 7.9rem;
+  width: 12vw;
+}
+
+.icons-sidebar {
+  width: 100%;
+  margin-top: 2.08rem;
+  margin-bottom: 0.2rem;
+  padding-bottom: 1rem;
+  color: white;
+  font-size: 20px;
+}
+
+.icons-sidebar-li {
+  border-bottom: solid white 1px;
+  width: 4.5vw;
+  color: white;
+}
+
+.icon-sidebar-closeSession {
+  width: 100%;
+  margin-top: 22.3rem;
+}
+
+.icons-wrapper {
+  background-image: radial-gradient(
+    circle at 50% -20.71%,
+    #be5af5 0,
+    #a04ff4 16.67%,
+    #7944f3 33.33%,
+    #3c3cf2 50%,
+    #0037f1 66.67%,
+    #0034ef 83.33%,
+    #0034ee 100%
+  );
+  margin-bottom: 0px;
+  padding-top: 5.64rem;
+  height: 100vh;
+  width: 5vw;
+}
+
+.links-text {
+  text-decoration: none;
+  color: gray;
+}
+
+.links:visited {
+  color: white;
 }
 
 /* CSS My account */
