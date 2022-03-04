@@ -1,12 +1,22 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleLeft } from "@fortawesome/free-solid-svg-icons"
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, Card, Form } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import usuario from "../assets/usuario1.png"
 
 
 export default function MyAccount() {
+    const [validated, setValidated] = useState(false);
+
+    const handleSubmit = (event) => {
+        const form = event.currentTarget;
+        event.preventDefault()
+        setValidated(true);
+        if (form.checkValidity() === false) {
+            return event.stopPropagation();
+        }
+    }
 
     const changePass = () => {
         document.getElementById("password").classList.toggle("d-none")
@@ -30,7 +40,11 @@ export default function MyAccount() {
             </div>
             <div>
                 <Card className='card-form-container'>
-                    <Form>
+                    <Form
+                        noValidate
+                        validated={validated}
+                        onSubmit={handleSubmit}
+                    >
                         <Form.Group className="mb-1 d-flex" controlId="formBasicName">
                             <Form.Label className='form-label'>Nombre</Form.Label>
                             <Form.Control className='form-control' type="text" />
@@ -61,19 +75,47 @@ export default function MyAccount() {
                         </Form.Group>
                         <Form.Group className="mb-1 d-flex" controlId="formBasicPassword" Id="password">
                             <Form.Label className='form-label'>Contraseña</Form.Label>
-                            <Form.Control className='form-control' type="password" placeholder='**********' />
+                            <Form.Control
+                                className='form-control'
+                                type="password"
+                                placeholder='**********'
+                                required
+                                pattern='(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}'
+                                minLength={10}
+                            />
                         </Form.Group>
                         <Form.Group className="mb-1 d-flex d-none" controlId="formBasicPassword" Id="actualPassword">
                             <Form.Label className='form-label-double'>Contraseña actual</Form.Label>
-                            <Form.Control className='form-control' type="password" placeholder='**********' />
+                            <Form.Control
+                                className='form-control'
+                                type="password"
+                                placeholder='**********'
+                                required
+                                pattern='(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}'
+                                minLength={10}
+                            />
                         </Form.Group>
                         <Form.Group className="mb-1 d-flex d-none" controlId="formBasicPassword" Id="newPassword">
                             <Form.Label className='form-label-double'>Nueva contraseña</Form.Label>
-                            <Form.Control className='form-control' type="password" placeholder='**********' />
+                            <Form.Control
+                                className='form-control'
+                                type="password"
+                                placeholder='**********'
+                                required
+                                pattern='(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}'
+                                minLength={10}
+                            />
                         </Form.Group>
                         <Form.Group className="mb-1 d-flex d-none" controlId="formBasicPassword" Id="repeatedNewPassword">
                             <Form.Label className='form-label-double'>Repetir nueva contraseña</Form.Label>
-                            <Form.Control className='form-control' type="password" placeholder='**********' />
+                            <Form.Control
+                                className='form-control'
+                                type="password"
+                                placeholder='**********'
+                                required
+                                pattern='(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}'
+                                minLength={10}
+                            />
                         </Form.Group>
                         <div className='d-flex flex-column align-items-end'>
                             <Link to="#" onClick={changePass}>Cambiar contraseña</Link>

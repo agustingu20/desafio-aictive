@@ -2,16 +2,11 @@ import { faListCheck, faStopwatch, faPersonRunning } from '@fortawesome/free-sol
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 import { Button, Dropdown, DropdownButton, InputGroup } from 'react-bootstrap'
+import usuario from "../assets/usuario1.png"
 
 export default function Metrics() {
 
     const buttons = ["Año", "Mes", "Semana"]
-    // const metrics = [
-    //     { routinesDoneYear: 300, exercicesDoneYear: 1488, exercicesTimeYear: 1752 },
-    //     { routinesDoneMonth: 25, exercicesDoneMonth: 124, exercicesTimeMonth: 146 },
-    //     { routinesDoneWeek: 4, exercicesDoneWeek: 18, exercicesTimeWeek: 36.5 }
-    // ]
-
     const metricsPerYear = { routinesDoneYear: 300, exercicesDoneYear: 1488, exercicesTimeYear: 1752 }
     const metricsPerMonth = { routinesDoneMonth: 25, exercicesDoneMonth: 124, exercicesTimeMonth: 146 }
     const metricsPerWeek = { routinesDoneWeek: 4, exercicesDoneWeek: 18, exercicesTimeWeek: 36.5 }
@@ -23,9 +18,10 @@ export default function Metrics() {
         <>
             <div style={{ position: "absolute", top: "1rem", right: "2rem" }} >
                 <InputGroup className="mb-3">
+                    <img src={usuario} alt="usuario" className='img-button-profile' />
                     <DropdownButton
-                        variant="outline-secondary"
-                        title="Dropdown"
+                        variant="light"
+                        title="Ragnar Lotbrok"
                         id="input-group-dropdown-1"
                     >
                         <Dropdown.Item href="#">Editar perfil</Dropdown.Item>
